@@ -1,17 +1,32 @@
 import React from 'react';
+import { NavLink } from 'react-router-dom';
+
+const navs = [
+    {
+        path: '/',
+        name: 'Home'
+    },
+    {
+        path: '/about',
+        name: 'About'
+    },
+    {
+        path: '/contact',
+        name: 'Contact'
+    }
+];
 
 const Nav = () => (
-    <nav className="bg-purple-600 text-white p-4 shadow">
+    <nav className="bg-purple-600 text-purple-300 p-4 shadow">
             <ul className="flex space-x-6 justify-end">
-                <li>
-                    <a href='/'>Home</a>
+                {navs.map((navItem, index) => (
+                    <li>
+                        <NavLink exact to={navItem.path} 
+                        activeClassName='text-purple-100'>
+                            {navItem.name}
+                        </NavLink>
                     </li>
-                <li>
-                    <a href='/about'>About</a>
-                    </li>
-                <li>
-                    <a href='/contact'>Contact</a>
-                </li>
+                ))}
             </ul>
         </nav>
 );

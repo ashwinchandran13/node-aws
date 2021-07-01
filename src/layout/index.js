@@ -1,10 +1,12 @@
 import React from 'react';
 
 import Nav from './Nav';
+import Footer from './Footer';
 
-const Layout = (props) => <div>
+const Layout = (props) => (
+    <div class="text-center p-10">
         {props.children}
-    </div>;
+    </div>
+);
 
-
-export { Layout, Nav };
+export { Layout, Nav, Footer };
