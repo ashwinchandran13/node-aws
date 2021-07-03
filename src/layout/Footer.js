@@ -1,8 +1,8 @@
 import React from 'react';
 
 const Footer = () => (
-    <footer>
-        Created by Ashwin Chandran 🖖
+    <footer className="bg-purple-500 text-center text-white p-5">
+        Created by Ashwin Chandran 🖖🇮🇳 
     </footer>
 );
 

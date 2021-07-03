@@ -8,24 +8,28 @@ import {
 
 import { Home, About, Contact } from './pages';
 
-import { Nav } from './layout';
+import { Nav, Footer } from './layout';
 
 function App() {
   return (
-    <Router>
-      <Nav />
-        <Switch>
-          <Route path='/about'>
-            <About />
-          </Route>
-          <Route path='/contact'>
-            <Contact />
-          </Route>
-          <Route path='/'>
-            <Home />
-          </Route>
-        </Switch>
-    </Router>
+    <div className="flex flex-col h-screen">
+      <Router>
+        <Nav />
+          <Switch>
+            <Route path='/about'>
+              <About />
+            </Route>
+            <Route path='/contact'>
+              <Contact />
+            </Route>
+            <Route path='/'>
+              <Home />
+            </Route>
+          </Switch>
+
+          <Footer />
+      </Router>
+    </div>
   );
 }
 
